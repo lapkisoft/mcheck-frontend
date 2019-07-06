@@ -25,15 +25,16 @@
                     flex-wrap:       nowrap;
                     justify-content: flex-start;
                     align-items:     center;
-                    border:          1px solid #c4c4c4;
-                    border-radius:   2px;
-                    margin:          5px 0;
-                    padding:         15px;
+                    border:          1px solid var(--color-primary);
+                    border-radius:   4px;
+                    margin:          15px 0;
+                    padding:         5px 15px;
                     font-size:       15px;
+                    font-weight:     500;
                     line-height:     18px;
                     letter-spacing:  -0.3px;
                     text-decoration: none;
-                    color:           #898989;
+                    color:           #000000;
                     outline:         none;
 
                     .icon {
@@ -51,9 +52,8 @@
                     }
 
                     &:hover, &:focus, &:active {
-                        background:   rgba(0, 0, 0, 0.05);
-                        color:        #505050;
-                        border-color: #505050;
+                        background:   rgba(48, 176, 0, 0.05);
+                        border-color: #25b00d;
                     }
                 }
             }

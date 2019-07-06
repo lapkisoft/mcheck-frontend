@@ -9,7 +9,7 @@ export default () => {
                     <li>
                         <Link to="/route-sheets">
                             <div className="icon">
-                                <img src="/img/icon-sheet.png" alt=""/>
+                                <img src="/img/icon-active-sheet.png" alt=""/>
                             </div>
 
                             <div className="text">Путевые листы</div>
@@ -18,7 +18,7 @@ export default () => {
                     <li>
                         <Link to="/vehicles">
                             <div className="icon">
-                                <img src="/img/icon-bus.png" alt=""/>
+                                <img src="/img/icon-active-vehicle.png" alt=""/>
                             </div>
 
                             <div className="text">Транспортные средства</div>
@@ -27,7 +27,7 @@ export default () => {
                     <li>
                         <Link to="/bus-drivers">
                             <div className="icon">
-                                <img src="/img/icon-face.png" alt=""/>
+                                <img src="/img/icon-active-person.png" alt=""/>
                             </div>
 
                             <div className="text">Водители</div>

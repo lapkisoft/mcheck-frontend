@@ -8,7 +8,7 @@ export default () => {
                 <nav>
                     <Link to="/" className="back-link"><i className="fa fa-arrow-left"/> Транспортные средства</Link>
 
-                    <img src="/img/icon-bus.png" alt=""/>
+                    <img src="/img/nav/icon-vehicle.png" alt=""/>
                 </nav>
             </header>
         </div>

@@ -50,7 +50,7 @@ export default class extends React.Component {
                     <nav>
                         <Link to="/" className="back-link"><i className="fa fa-arrow-left"/> Путевые листы</Link>
 
-                        <img src="/img/icon-sheet.png" alt=""/>
+                        <img src="/img/nav/icon-sheet.png" alt=""/>
                     </nav>
                 </header>
 

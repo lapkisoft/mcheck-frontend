@@ -4,6 +4,7 @@
     line-height:          1.4;
 
     --horizontal-padding: 16px;
+    --color-primary:      #4bd827;
 }
 
 *, *:before, *:after {
@@ -13,7 +14,7 @@
 html, body {
     margin:     0;
     padding:    0;
-    background: #e5e5e5;
+    background: #f3f7fa;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -32,7 +33,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 header {
     position:   relative;
-    background: white;
+    background: var(--color-primary);
     margin:     0 0 15px;
     min-height: 50px;
     box-shadow: 0 0 15px #dddddd;
@@ -43,18 +44,21 @@ header {
         flex-wrap:       nowrap;
         justify-content: space-between;
         align-items:     center;
-        padding:         0 var(--horizontal-padding);
+        padding:         0;
 
         a.back-link {
             display:         inline-block;
-            padding:         14px 0;
-            color:           #404040;
+            padding:         14px var(--horizontal-padding);
+            color:           white;
             text-decoration: none;
+            font-weight:     500;
             font-size:       14px;
             line-height:     22px;
 
             i.fa {
                 display:   inline-block;
+                position:  relative;
+                top:       -1px;
                 margin:    0 4px 0 0;
                 font-size: 0.85em;
             }
@@ -64,7 +68,7 @@ header {
             display:         block;
             width:           24px;
             height:          24px;
-            margin:          0;
+            margin:          0 var(--horizontal-padding);
             object-fit:      contain;
             object-position: center center;
         }
@@ -87,6 +91,7 @@ footer {
     width:           100%;
     background:      white;
     padding:         0 var(--horizontal-padding);
+    box-shadow:      0 0 5px #c0c0c0;
 
     nav {
         width: 100%;
@@ -122,11 +127,16 @@ footer {
     padding: 0 var(--horizontal-padding);
 
     a {
-        margin: 0 0 10px;
+        margin:         0 0 10px;
+        padding:        20px;
+        font-size:      16px;
+        font-weight:    400;
+        line-height:    1;
+        text-transform: none;
 
         &.update {
-            color:  #587cf4;
-            border: 1px solid #587cf4;
+            color:  var(--color-primary);
+            border: 1px solid var(--color-primary);
         }
 
         &.delete {

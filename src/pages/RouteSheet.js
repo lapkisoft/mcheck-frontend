@@ -44,7 +44,7 @@ export default class extends React.Component {
                             <i className="fa fa-arrow-left"/> Путевой лист #{route.id}
                         </Link>
 
-                        <img src="/img/icon-sheet.png" alt=""/>
+                        <img src="/img/nav/icon-sheet.png" alt=""/>
                     </nav>
                 </header>
 
