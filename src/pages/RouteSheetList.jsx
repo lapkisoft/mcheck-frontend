@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {formatDate, formatTime} from '../utils/format';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
 import route_sheets from '../data/router-sheets.json';
 
 export default class extends React.Component {
@@ -23,12 +25,13 @@ export default class extends React.Component {
                 {show_date && <div className="route-date"><span>{route_date}</span></div>}
 
                 <div className="header">
+                    <span>#{item.id}</span>
                     <span>Серия: {item.series}</span>
                     <span>Номер: {item.number}</span>
                 </div>
 
                 <div className="content-short">
-                    <p>{item.vehicle_driver_name}</p>
+                    <p>{item.driver_name}</p>
                     <p>{item.vehicle_vendor} {item.vehicle_number}</p>
                     <div className="route-info">
                         <div className="time-range">{start_time} - {end_time}</div>
@@ -57,6 +60,12 @@ export default class extends React.Component {
                 <div className="route-sheet-list">
                     {route_sheet_list}
                 </div>
+
+                <Link to="/route-sheet-create">
+                    <Fab className="btn-float-add" aria-label="Add">
+                        <AddIcon/>
+                    </Fab>
+                </Link>
             </div>
         );
     }

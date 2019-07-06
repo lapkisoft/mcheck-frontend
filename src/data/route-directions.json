@@ -1,0 +1,29 @@
+[
+  {
+    "id":               1,
+    "departure_name":   "Новосибирск",
+    "destination_name": "Томск"
+  },
+  {
+    "id":               2,
+    "departure_name":   "Новосибирск",
+    "destination_name": "Омск"
+  },
+  {
+    "id":               3,
+    "departure_name":   "Новосибирск",
+    "destination_name": "Красноярск"
+  },
+  {
+    "id":               4,
+    "departure_name":   "Новосибирск",
+    "destination_name": "Москва",
+    "is_disabled":      true
+  },
+  {
+    "id":               5,
+    "departure_name":   "Новосибирск",
+    "destination_name": "Санкт-Петербург",
+    "is_disabled":      true
+  }
+]

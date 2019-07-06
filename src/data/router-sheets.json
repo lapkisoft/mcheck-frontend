@@ -1,12 +1,15 @@
 [
   {
-    "id":                  1,
-    "series":              "12345",
-    "number":              "678901",
-    "vehicle_driver_name": "Иванов Иван Иванович",
-    "vehicle_vendor":      "Икарус",
-    "vehicle_number":      "т223тт",
-    "runs":                [
+    "id":             1,
+    "series":         "12345",
+    "number":         "678901",
+    "driver_id":      1,
+    "vehicle_id":     1,
+    "direction_id":   1,
+    "driver_name":    "Иванов Иван Иванович",
+    "vehicle_vendor": "Икарус",
+    "vehicle_number": "т223тт",
+    "runs":           [
       {
         "time": "2019-07-06T22:00:00+07:00",
         "type": "Автовокзал",
@@ -26,13 +29,16 @@
     ]
   },
   {
-    "id":                  2,
-    "series":              "12345",
-    "number":              "678901",
-    "vehicle_driver_name": "Иванов Иван Иванович",
-    "vehicle_vendor":      "Икарус",
-    "vehicle_number":      "т223тт",
-    "runs":                [
+    "id":             2,
+    "series":         "12345",
+    "number":         "678901",
+    "driver_id":      1,
+    "vehicle_id":     1,
+    "direction_id":   1,
+    "driver_name":    "Иванов Иван Иванович",
+    "vehicle_vendor": "Икарус",
+    "vehicle_number": "т223тт",
+    "runs":           [
       {
         "time": "2019-07-06T22:00:00+07:00",
         "type": "Автовокзал",
@@ -52,13 +58,16 @@
     ]
   },
   {
-    "id":                  3,
-    "series":              "12345",
-    "number":              "678901",
-    "vehicle_driver_name": "Иванов Иван Иванович",
-    "vehicle_vendor":      "Икарус",
-    "vehicle_number":      "т223тт",
-    "runs":                [
+    "id":             3,
+    "series":         "12345",
+    "number":         "678901",
+    "driver_id":      1,
+    "vehicle_id":     1,
+    "direction_id":   1,
+    "driver_name":    "Иванов Иван Иванович",
+    "vehicle_vendor": "Икарус",
+    "vehicle_number": "т223тт",
+    "runs":           [
       {
         "time": "2019-07-07T22:00:00+07:00",
         "type": "Автовокзал",
@@ -78,13 +87,16 @@
     ]
   },
   {
-    "id":                  4,
-    "series":              "12345",
-    "number":              "678901",
-    "vehicle_driver_name": "Иванов Иван Иванович",
-    "vehicle_vendor":      "Икарус",
-    "vehicle_number":      "т223тт",
-    "runs":                [
+    "id":             4,
+    "series":         "12345",
+    "number":         "678901",
+    "driver_id":      1,
+    "vehicle_id":     1,
+    "direction_id":   1,
+    "driver_name":    "Иванов Иван Иванович",
+    "vehicle_vendor": "Икарус",
+    "vehicle_number": "т223тт",
+    "runs":           [
       {
         "time": "2019-07-07T22:00:00+07:00",
         "type": "Автовокзал",

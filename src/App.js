@@ -1,13 +1,15 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 
-import NotFound from './pages/NotFound';
+import NotFound from './pages/NotFound.jsx';
 
-import Index from './pages/Index';
-import RouteSheet from './pages/RouteSheet';
-import RouteSheetList from './pages/RouteSheetList';
-import BusDrivers from './pages/BusDrivers';
-import Vehicles from './pages/Vehicles';
+import Index from './pages/Index.jsx';
+import RouteSheet from './pages/RouteSheet.jsx';
+import RouteSheetCreate from './pages/RouteSheetCreate.jsx';
+import RouteSheetUpdate from './pages/RouteSheetUpdate.jsx';
+import RouteSheetList from './pages/RouteSheetList.jsx';
+import BusDrivers from './pages/BusDrivers.jsx';
+import Vehicles from './pages/Vehicles.jsx';
 import MapPage from './views/MapPage/MapPage.jsx';
 
 export default () => {
@@ -19,6 +21,8 @@ export default () => {
                     <Route path="/bus-drivers" component={BusDrivers}/>
                     <Route path="/route-sheets" component={RouteSheetList}/>
                     <Route path="/route-sheet/:id" component={RouteSheet}/>
+                    <Route path="/route-sheet-create" component={RouteSheetCreate}/>
+                    <Route path="/route-sheet-update/:id" component={RouteSheetUpdate}/>
                     <Route path="/vehicles" component={Vehicles}/>
                     <Route path="/map-page" component={MapPage}/>
                     <Route component={NotFound}/>

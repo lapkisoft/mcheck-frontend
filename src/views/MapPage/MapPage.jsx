@@ -12,7 +12,7 @@ import driver1 from '../../data/driver-01.json';
 import driver2 from '../../data/driver-02.json';
 import driver3 from '../../data/driver-03.json';
 
-const {compose, withProps, lifecycle} = require('recompose');
+const {compose, withProps} = require('recompose');
 
 const googleMapURL = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyALzBzV-LGkRl6wqAojCO45Mv0myyRj4kE&v=3.exp&libraries=geometry,drawing,places';
 
@@ -130,7 +130,6 @@ class MapPage extends Component {
     );
 
     render() {
-        let selectDriver = 0;
         return (
             <Fragment>
                 <this.CMap center={{lat: 25.03, lng: 121.6}} driver={this.state.drivers[0]}>

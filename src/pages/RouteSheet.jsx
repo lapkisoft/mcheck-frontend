@@ -10,14 +10,14 @@ export default class extends React.Component {
 
         this.renderRun = this.renderRun.bind(this);
 
-        let route_id = parseInt(`${props.match.params.id}`),
-            route    = route_sheets.filter(({id}) => id === route_id)[0];
+        let sheet_id = parseInt(`${props.match.params.id}`),
+            sheet    = route_sheets.filter(({id}) => id === sheet_id)[0];
 
-        this.state = {route};
+        this.state = {sheet};
     }
 
-    renderRun(run) {
-        return <div className="check">
+    renderRun(run, index) {
+        return <div key={index} className="check">
             <div className="datetime">
                 <div className="time">{formatTime(run.time)}</div>
                 <div className="date">{formatDate(run.time)}</div>
@@ -33,15 +33,15 @@ export default class extends React.Component {
     }
 
     render() {
-        let route    = this.state.route,
-            run_list = route.runs.map(this.renderRun);
+        let sheet    = this.state.sheet,
+            run_list = sheet.runs.map(this.renderRun);
 
         return (
             <div>
                 <header>
                     <nav>
                         <Link to="/route-sheets" className="back-link">
-                            <i className="fa fa-arrow-left"/> Путевой лист #{route.id}
+                            <i className="fa fa-arrow-left"/> Путевой лист #{sheet.id}
                         </Link>
 
                         <img src="/img/nav/icon-sheet.png" alt=""/>
@@ -51,8 +51,9 @@ export default class extends React.Component {
                 <div className="route-sheet-list">
                     <div className="route-sheet">
                         <div className="header">
-                            <span>Серия: {route.series}</span>
-                            <span>Номер: {route.number}</span>
+                            <span>#{sheet.id}</span>
+                            <span>Серия: {sheet.series}</span>
+                            <span>Номер: {sheet.number}</span>
                         </div>
 
                         <div className="content">
@@ -61,7 +62,7 @@ export default class extends React.Component {
                                     <img src="/img/avatar-bus-driver.png" alt=""/>
                                 </div>
 
-                                <div className="name">{route.vehicle_driver_name}</div>
+                                <div className="name">{sheet.driver_name}</div>
 
                                 <div className="status"/>
                             </div>
@@ -72,9 +73,9 @@ export default class extends React.Component {
                                 </div>
 
                                 <div className="name">
-                                    {route.vehicle_vendor}
+                                    {sheet.vehicle_vendor}
                                     <br/>
-                                    <span>гос номер:</span> {route.vehicle_number}
+                                    <span>гос номер:</span> {sheet.vehicle_number}
                                 </div>
 
                                 <div className="status"/>
@@ -90,7 +91,7 @@ export default class extends React.Component {
                 <div className="page-controls">
                     <Button
                         component={Link}
-                        to={`/route-sheet-update/${route.id}`}
+                        to={`/route-sheet-update/${sheet.id}`}
                         fullWidth
                         className="update">
                         Редактировать
@@ -98,7 +99,7 @@ export default class extends React.Component {
 
                     <Button
                         component={Link}
-                        to={`/route-sheet-update/${route.id}`}
+                        to={`/route-sheet-update/${sheet.id}`}
                         fullWidth
                         className="delete">
                         Удалить
