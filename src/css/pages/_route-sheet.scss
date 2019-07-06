@@ -1,0 +1,268 @@
+.route-sheet-list {
+    max-width: 640px;
+    margin:    0 auto;
+    padding:   0 var(--horizontal-padding);
+
+    .route-sheet {
+        display:         block;
+        margin:          0 0 15px;
+        border-radius:   2px;
+        overflow:        hidden;
+        color:           #404040;
+        text-decoration: none;
+
+        .route-date {
+            display:     block;
+            position:    relative;
+            margin:      15px 0 10px;
+            font-size:   12px;
+            font-weight: 700;
+            line-height: 1.4;
+            color:       #404040;
+            overflow:    hidden;
+
+            span {
+                display:  inline-block;
+                position: relative;
+
+                &:after {
+                    content:    '';
+                    display:    block;
+                    position:   absolute;
+                    width:      100vw;
+                    height:     2px;
+                    bottom:     7px;
+                    left:       calc(100% + 5px);
+                    background: #aaaaaa;
+                }
+            }
+        }
+
+        .header {
+            padding:     7px 12px;
+            background:  #eeeeee;
+            color:       #a1a1a1;
+            font-size:   12px;
+            line-height: 16px;
+
+            span {
+                display: inline-block;
+                margin:  0 5px 0 0;
+            }
+        }
+
+        .content-short {
+            background: white;
+            padding:    8px 12px;
+
+            p {
+                margin:      0 0 3px;
+                padding:     0;
+                font-size:   13px;
+                line-height: 16px;
+            }
+
+            .route-info {
+                display:         flex;
+                flex-direction:  row;
+                flex-wrap:       nowrap;
+                justify-content: flex-start;
+                align-items:     flex-start;
+                margin:          8px 0 0;
+
+                .time-range {
+                    margin:      0 10px 0 0;
+                    font-size:   13px;
+                    line-height: 1.4;
+                    color:       #949494;
+                }
+
+                .point {
+                    font-size:   13px;
+                    line-height: 1.4;
+                }
+
+                i.fa {
+                    display:   inline-block;
+                    margin:    0 3px;
+                    padding:   5px 0 0;
+                    font-size: 8px;
+                    color:     #aaaaaa;
+                }
+            }
+        }
+
+        .content {
+            background: white;
+            margin:     0 0 12px;
+            padding:    8px 12px;
+
+            .vehicle-driver-info, .vehicle-info {
+                display:         flex;
+                flex-direction:  row;
+                flex-wrap:       wrap;
+                justify-content: flex-start;
+                align-items:     center;
+                margin:          0 0 10px;
+
+                .icon {
+                    flex-shrink: 0;
+
+                    img {
+                        display:         block;
+                        width:           32px;
+                        height:          32px;
+                        object-fit:      contain;
+                        object-position: center;
+                    }
+                }
+
+                .name {
+                    flex-grow:   1;
+                    flex-basis:  0;
+                    margin:      0;
+                    padding:     6px 12px;
+                    font-size:   14px;
+                    line-height: 16px;
+
+                    span {
+                        color: #a2a2a2;
+                    }
+                }
+
+                .status {
+                    flex-shrink:         0;
+                    display:             block;
+                    width:               32px;
+                    height:              32px;
+                    background-position: center;
+                    background-repeat:   no-repeat;
+                }
+            }
+
+            .vehicle-driver-info {
+                .status {
+                    background-image: url(/img/icon-medics.png);
+
+                    &.success {
+                        background-image: url(/img/icon-medics-success.png);
+                    }
+
+                    &.danger {
+                        background-image: url(/img/icon-medics-danger.png);
+                    }
+                }
+            }
+
+            .vehicle-info {
+                .status {
+                    background-image: url(/img/icon-mechanics.png);
+
+                    &.success {
+                        background-image: url(/img/icon-mechanics-success.png);
+                    }
+
+                    &.danger {
+                        background-image: url(/img/icon-mechanics-danger.png);
+                    }
+                }
+            }
+
+            .checking-line {
+                .check {
+                    display:         flex;
+                    position:        relative;
+                    flex-direction:  row;
+                    flex-wrap:       nowrap;
+                    justify-content: flex-start;
+                    align-items:     flex-start;
+                    margin:          0;
+                    padding:         5px 0 25px 26px;
+
+                    &:before {
+                        content:       '';
+                        display:       block;
+                        position:      absolute;
+                        top:           10px;
+                        left:          8px;
+                        width:         7px;
+                        height:        7px;
+                        background:    #c4c4c4;
+                        border-radius: 50%;
+                    }
+
+                    &:after {
+                        content:      '';
+                        display:      block;
+                        position:     absolute;
+                        top:          19px;
+                        left:         11px;
+                        width:        0;
+                        height:       calc(100% - 10px);
+                        border-right: 1px dashed #c4c4c4;
+                    }
+
+                    .datetime {
+                        flex-shrink: 0;
+                        width:       85px;
+
+                        .time {
+                            margin:      0 0 3px;
+                            font-size:   16px;
+                            line-height: 1;
+                            color:       #949494;
+                        }
+
+                        .date {
+                            margin:      0;
+                            font-size:   12px;
+                            line-height: 1;
+                            color:       #c4c4c4;
+                        }
+                    }
+
+                    .info {
+                        flex-grow:  1;
+                        flex-basis: 0;
+
+                        .name {
+                            margin:      0 0 3px;
+                            font-size:   16px;
+                            line-height: 1;
+                        }
+
+                        .type {
+                            font-size:   12px;
+                            line-height: 1;
+                            color:       #949494;
+                        }
+                    }
+
+                    .status {
+                        flex-shrink:         0;
+                        display:             block;
+                        width:               32px;
+                        height:              32px;
+                        background-position: center;
+                        background-repeat:   no-repeat;
+                        background-image:    url(/img/icon-medics.png);
+
+                        &.success {
+                            background-image: url(/img/icon-medics-success.png);
+                        }
+
+                        &.danger {
+                            background-image: url(/img/icon-medics-danger.png);
+                        }
+                    }
+
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

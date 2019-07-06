@@ -1,0 +1,138 @@
+:root {
+    font-size:            16px;
+    font-family:          Roboto, sans-serif;
+    line-height:          1.4;
+
+    --horizontal-padding: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin:     0;
+    padding:    0;
+    background: #e5e5e5;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 0.5em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.container {
+    width:     100%;
+    max-width: 770px;
+    margin:    0 auto;
+}
+
+header {
+    position:   relative;
+    background: white;
+    margin:     0 0 15px;
+    min-height: 50px;
+    box-shadow: 0 0 15px #dddddd;
+
+    nav {
+        display:         flex;
+        flex-direction:  row;
+        flex-wrap:       nowrap;
+        justify-content: space-between;
+        align-items:     center;
+        padding:         0 var(--horizontal-padding);
+
+        a.back-link {
+            display:         inline-block;
+            padding:         14px 0;
+            color:           #404040;
+            text-decoration: none;
+            font-size:       14px;
+            line-height:     22px;
+
+            i.fa {
+                display:   inline-block;
+                margin:    0 4px 0 0;
+                font-size: 0.85em;
+            }
+        }
+
+        img {
+            display:         block;
+            width:           24px;
+            height:          24px;
+            margin:          0;
+            object-fit:      contain;
+            object-position: center center;
+        }
+    }
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+footer {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    align-items:     center;
+    position:        fixed;
+    bottom:          0;
+    left:            0;
+    width:           100%;
+    background:      white;
+    padding:         0 var(--horizontal-padding);
+
+    nav {
+        width: 100%;
+
+        ul {
+            display:         flex;
+            flex-direction:  row;
+            flex-wrap:       nowrap;
+            justify-content: space-around;
+            align-items:     center;
+            list-style:      none;
+            width:           100%;
+            margin:          0 auto;
+            padding:         0;
+
+            > li {
+                a {
+                    display: block;
+                    padding: 13px;
+
+                    img {
+                        display: block;
+                        width:   auto;
+                        height:  24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-controls {
+    padding: 0 var(--horizontal-padding);
+
+    a {
+        margin: 0 0 10px;
+
+        &.update {
+            color:  #587cf4;
+            border: 1px solid #587cf4;
+        }
+
+        &.delete {
+            background: #f47458;
+            border:     1px solid #f47458;
+            color:      white;
+        }
+    }
+}
