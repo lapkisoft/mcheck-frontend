@@ -15,24 +15,6 @@ export default () => {
                             <div className="text">Путевые листы</div>
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/vehicles">
-                            <div className="icon">
-                                <img src="/img/icon-active-vehicle.png" alt=""/>
-                            </div>
-
-                            <div className="text">Транспортные средства</div>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/drivers">
-                            <div className="icon">
-                                <img src="/img/icon-active-person.png" alt=""/>
-                            </div>
-
-                            <div className="text">Водители</div>
-                        </Link>
-                    </li>
                 </ul>
             </nav>
         </section>
