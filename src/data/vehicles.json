@@ -1,22 +1,37 @@
 [
   {
-    "id":   1,
-    "name": "Икарус Т223ТТ"
+    "id":         1,
+    "vendor":     "Икарус",
+    "number":     "Т223ТТ",
+    "year":       1990,
+    "avatar_uri": "/img/vehicles/01.png"
   },
   {
-    "id":   2,
-    "name": "Лиаз К213КК"
+    "id":         2,
+    "vendor":     "Лиаз",
+    "number":     "К213КК",
+    "year":       1998,
+    "avatar_uri": "/img/vehicles/02.png"
   },
   {
-    "id":   3,
-    "name": "Рено Р123РР"
+    "id":         3,
+    "vendor":     "Рено",
+    "number":     "Р123РР",
+    "year":       2007,
+    "avatar_uri": "/img/vehicles/03.png"
   },
   {
-    "id":   4,
-    "name": "Мерседес A444AA"
+    "id":         4,
+    "vendor":     "Мерседес",
+    "number":     "A444AA",
+    "year":       2012,
+    "avatar_uri": "/img/vehicles/04.png"
   },
   {
-    "id":   5,
-    "name": "Volvo О124ОО"
+    "id":         5,
+    "vendor":     "Volvo",
+    "number":     "О124ОО",
+    "year":       1985,
+    "avatar_uri": "/img/vehicles/05.png"
   }
 ]

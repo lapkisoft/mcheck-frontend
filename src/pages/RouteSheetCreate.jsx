@@ -64,11 +64,12 @@ export default function() {
         <div>
             <header>
                 <nav>
-                    <Link to="/" className="back-link"><i className="fa fa-arrow-left"/> Создание путевого листа</Link>
+                    <Link to="/route-sheets" className="back-link"><i className="fa fa-arrow-left"/> Создание путевого листа</Link>
 
                     <img src="/img/nav/icon-add-vehicle.png" alt=""/>
                 </nav>
             </header>
+
             <form action="" noValidate autoComplete="off">
                 <section className="section-form">
                     <p className="help-block">Текст-подсказка для самых одаренных. Может даже в 2 предложения</p>

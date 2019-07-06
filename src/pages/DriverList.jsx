@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import drivers from '../data/drivers.json';
 import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/core/SvgIcon/SvgIcon';
+import AddIcon from '@material-ui/icons/Add';
+import drivers from '../data/drivers.json';
 
 export default class extends React.Component {
     constructor(props) {
@@ -13,17 +13,17 @@ export default class extends React.Component {
         this.state = {drivers};
     }
 
-    renderDriver(driver, index) {
+    renderDriver(driver) {
         return (
-            <Link to={`/driver/${driver.id}`} key={driver.id} className="driver">
+            <div key={driver.id} className="driver">
                 <div className="icon">
-                    <Link to={`/driver/${driver.id}`}>
+                    <Link to={`/driver-update/${driver.id}`}>
                         <img src="/img/avatar-driver.png" alt=""/>
                     </Link>
                 </div>
 
                 <div className="name">
-                    <Link to={`/driver/${driver.id}`}>
+                    <Link to={`/driver-update/${driver.id}`}>
                         {driver.name}
                     </Link>
                 </div>
@@ -33,7 +33,7 @@ export default class extends React.Component {
                         <img src="/img/icon-trash.png" alt=""/>
                     </Link>
                 </div>
-            </Link>
+            </div>
         );
     }
 
