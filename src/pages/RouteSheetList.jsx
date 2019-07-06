@@ -9,12 +9,12 @@ export default class extends React.Component {
     constructor(props) {
         super(props);
 
-        this.renderRoute = this.renderRoute.bind(this);
+        this.renderSheet = this.renderSheet.bind(this);
 
         this.state = {route_sheets};
     }
 
-    renderRoute(item, index, routes) {
+    renderSheet(item, index, routes) {
         let route_date = formatDate(item.runs[0].time),
             start_time = formatTime(item.runs[0].time),
             end_time   = formatTime(item.runs[item.runs.length - 1].time),
@@ -45,7 +45,7 @@ export default class extends React.Component {
     }
 
     render() {
-        let route_sheet_list = this.state.route_sheets.map(this.renderRoute);
+        let route_sheet_list = this.state.route_sheets.map(this.renderSheet);
 
         return (
             <div>

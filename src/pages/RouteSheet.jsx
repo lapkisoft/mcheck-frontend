@@ -59,7 +59,7 @@ export default class extends React.Component {
                         <div className="content">
                             <div className="vehicle-driver-info">
                                 <div className="icon">
-                                    <img src="/img/avatar-bus-driver.png" alt=""/>
+                                    <img src="/img/avatar-driver.png" alt=""/>
                                 </div>
 
                                 <div className="name">{sheet.driver_name}</div>
@@ -69,7 +69,7 @@ export default class extends React.Component {
 
                             <div className="vehicle-info">
                                 <div className="icon">
-                                    <img src="/img/avatar-bus.png" alt=""/>
+                                    <img src="/img/avatar-vehicle.png" alt=""/>
                                 </div>
 
                                 <div className="name">

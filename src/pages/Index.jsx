@@ -25,7 +25,7 @@ export default () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/bus-drivers">
+                        <Link to="/drivers">
                             <div className="icon">
                                 <img src="/img/icon-active-person.png" alt=""/>
                             </div>

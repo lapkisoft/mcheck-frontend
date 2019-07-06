@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import {Button} from '@material-ui/core';
-import vehicle_drivers from '../data/vehicle-drivers.json';
+import drivers from '../data/drivers.json';
 import vehicles from '../data/vehicles.json';
 import route_destinations from '../data/route-directions.json';
 import route_sheets from '../data/router-sheets';
@@ -45,7 +45,7 @@ export default function({match}) {
         direction_id: sheet.direction_id
     });
 
-    let vehicle_driver_list    = vehicle_drivers.map(({id, name}) => <MenuItem key={id} value={id}>{name}</MenuItem>),
+    let vehicle_driver_list    = drivers.map(({id, name}) => <MenuItem key={id} value={id}>{name}</MenuItem>),
         vehicle_list           = vehicles.map(({id, name}) => <MenuItem key={id} value={id}>{name}</MenuItem>),
         route_destination_list = route_destinations.map(({id, departure_name, destination_name, is_disabled = false}) => {
             return <MenuItem key={id}
