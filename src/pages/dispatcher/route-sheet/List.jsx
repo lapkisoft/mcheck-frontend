@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {formatDate, formatTime} from '../utils/format';
+import {formatDate, formatTime} from '../../../utils/format';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-import route_sheets from '../data/router-sheets.json';
+import route_sheets from '../../../data/router-sheets.json';
 
 export default class extends React.Component {
     constructor(props) {

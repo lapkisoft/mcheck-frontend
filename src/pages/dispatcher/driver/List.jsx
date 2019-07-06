@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-import drivers from '../data/drivers.json';
+import drivers from '../../../data/drivers.json';
 
 export default class extends React.Component {
     constructor(props) {

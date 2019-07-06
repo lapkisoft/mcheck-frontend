@@ -1,38 +1,36 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 
-import NotFound from './pages/NotFound.jsx';
+import NotFound from '../NotFound.jsx';
 
-import Index from './pages/Index.jsx';
-import RouteSheet from './pages/RouteSheet.jsx';
-import RouteSheetCreate from './pages/RouteSheetCreate.jsx';
-import RouteSheetUpdate from './pages/RouteSheetUpdate.jsx';
-import RouteSheetList from './pages/RouteSheetList.jsx';
-import DriverList from './pages/DriverList.jsx';
-import DriverCreate from './pages/DriverCreate.jsx';
-import DriverUpdate from './pages/DriverUpdate.jsx';
-import VehicleList from './pages/VehicleList.jsx';
-import VehicleCreate from './pages/VehicleCreate.jsx';
-import VehicleUpdate from './pages/VehicleUpdate.jsx';
-import MapPage from './views/MapPage/MapPage.jsx';
+import DispatcherIndex from './Index.jsx';
+import RouteSheetView from './route-sheet/View.jsx';
+import RouteSheetCreate from './route-sheet/Create.jsx';
+import RouteSheetUpdate from './route-sheet/Update.jsx';
+import RouteSheetList from './route-sheet/List.jsx';
+import DriverList from './driver/List.jsx';
+import DriverCreate from './driver/Create.jsx';
+import DriverUpdate from './driver/Update.jsx';
+import VehicleList from './vehicle/List.jsx';
+import VehicleCreate from './vehicle/Create.jsx';
+import VehicleUpdate from './vehicle/Update.jsx';
 
 export default () => {
     return (
         <Router>
             <main>
                 <Switch>
-                    <Route path="/" exact component={Index}/>
+                    <Route path="/" exact component={DispatcherIndex}/>
                     <Route path="/drivers" component={DriverList}/>
                     <Route path="/driver-create" component={DriverCreate}/>
                     <Route path="/driver-update/:id" component={DriverUpdate}/>
                     <Route path="/route-sheets" component={RouteSheetList}/>
-                    <Route path="/route-sheet/:id" component={RouteSheet}/>
+                    <Route path="/route-sheet/:id" component={RouteSheetView}/>
                     <Route path="/route-sheet-create" component={RouteSheetCreate}/>
                     <Route path="/route-sheet-update/:id" component={RouteSheetUpdate}/>
                     <Route path="/vehicles" component={VehicleList}/>
                     <Route path="/vehicle-create" component={VehicleCreate}/>
                     <Route path="/vehicle-update/:id" component={VehicleUpdate}/>
-                    <Route path="/map-page" component={MapPage}/>
                     <Route component={NotFound}/>
                 </Switch>
             </main>

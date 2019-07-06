@@ -7,10 +7,10 @@ import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import {Button} from '@material-ui/core';
-import drivers from '../data/drivers.json';
-import vehicles from '../data/vehicles.json';
-import route_destinations from '../data/route-directions.json';
-import route_sheets from '../data/router-sheets';
+import drivers from '../../../data/drivers.json';
+import vehicles from '../../../data/vehicles.json';
+import route_destinations from '../../../data/route-directions.json';
+import route_sheets from '../../../data/router-sheets';
 
 const useStyles = makeStyles(theme => ({
     container:   {
@@ -69,7 +69,7 @@ export default function({match}) {
         <div>
             <header>
                 <nav>
-                    <Link to="/" className="back-link"><i className="fa fa-arrow-left"/> Редактирование путевого листа #{sheet_id}</Link>
+                    <Link to={`/route-sheet/${sheet_id}`} className="back-link"><i className="fa fa-arrow-left"/> Редактирование путевого листа #{sheet_id}</Link>
 
                     <img src="/img/nav/icon-add-vehicle.png" alt=""/>
                 </nav>
