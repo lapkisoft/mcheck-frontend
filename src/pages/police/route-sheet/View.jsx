@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {formatDate, formatTime} from '../../../utils/format';
-import route_sheets from '../../../data/router-sheets';
+import {route_sheets} from '../../../utils/data';
 
 export default class extends React.Component {
     constructor(props) {
@@ -64,7 +64,7 @@ export default class extends React.Component {
 
                                 <div className="name">{sheet.driver_name}</div>
 
-                                <div className="status"/>
+                                <div className={`status ${sheet.medic_check || ''}`}/>
                             </div>
 
                             <div className="vehicle-info">
@@ -78,7 +78,7 @@ export default class extends React.Component {
                                     <span>гос номер:</span> {sheet.vehicle_number}
                                 </div>
 
-                                <div className="status"/>
+                                <div className={`status ${sheet.mechanic_check || ''}`}/>
                             </div>
 
                             <div className="checking-line">

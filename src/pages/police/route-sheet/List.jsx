@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {formatDate, formatTime} from '../../../utils/format';
-import route_sheets from '../../../data/router-sheets.json';
+import {route_sheets} from '../../../utils/data';
 
 export default class extends React.Component {
     constructor(props) {
@@ -13,18 +13,21 @@ export default class extends React.Component {
     }
 
     renderSheet(item, index, routes) {
-        let route_date       = formatDate(item.runs[0].time),
-            start_time       = formatTime(item.runs[0].time),
-            end_time         = formatTime(item.runs[item.runs.length - 1].time),
-            show_date        = index === 0 || formatDate(routes[index - 1].runs[0].time) !== route_date,
-            checks           = [
+        let route_date        = formatDate(item.runs[0].time),
+            start_time        = formatTime(item.runs[0].time),
+            end_time          = formatTime(item.runs[item.runs.length - 1].time),
+            show_date         = index === 0 || formatDate(routes[index - 1].runs[0].time) !== route_date,
+            checks            = [
                 <div key={-2} className={`medic ${item.medic_check || ''}`}/>,
                 <div key={-1} className={`mechanic ${item.mechanic_check || ''}`}/>,
                 ...item.runs.filter(run => run.hasOwnProperty('check')).map((run, index) => {
                     return <div key={index} className={`medic ${run.check || ''}`}/>;
                 })
             ],
-            police_is_danger = item.medic_check === 'danger' || item.mechanic_check === 'danger';
+            police_has_status = item.medic_check !== null || item.mechanic_check !== null,
+            police_is_danger  = item.medic_check === 'danger' || item.mechanic_check === 'danger';
+
+        console.log(item);
 
         police_is_danger = police_is_danger || item.runs.filter(({check}) => check === 'danger').length > 0;
 
@@ -40,7 +43,7 @@ export default class extends React.Component {
                 </div>
 
                 <div className="content-short">
-                    <div className={`police-status ${police_is_danger ? 'danger' : 'success'}`}/>
+                    {police_has_status && <div className={`police-status ${police_is_danger ? 'danger' : 'success'}`}/>}
 
                     <p>
                         <img src="/img/icon-sheet-driver.png" alt="" className="icon"/>
