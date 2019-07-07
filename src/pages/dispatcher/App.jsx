@@ -47,7 +47,7 @@ export default () => {
                             <Link to="/route-sheets"><img src="/img/icon-sheet.png" alt=""/></Link>
                         </li>
                         <li>
-                            <Link to="/vehicles"><img src="/img/icon-bus.png" alt=""/></Link>
+                            <Link to="/vehicles"><img src="/img/icon-vehicle.png" alt=""/></Link>
                         </li>
                         <li>
                             <Link to="/drivers"><img src="/img/icon-face.png" alt=""/></Link>
