@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {formatDate, formatTime} from '../../../utils/format';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
 import route_sheets from '../../../data/router-sheets.json';
 
 export default class extends React.Component {
@@ -20,10 +18,10 @@ export default class extends React.Component {
             end_time   = formatTime(item.runs[item.runs.length - 1].time),
             show_date  = index === 0 || formatDate(routes[index - 1].runs[0].time) !== route_date,
             checks     = [
-                <div className={`medic ${item.medic_check || ''}`}/>,
-                <div className={`mechanic ${item.mechanic_check || ''}`}/>,
-                ...item.runs.filter(run => run.hasOwnProperty('check')).map(run => {
-                    return <div className={`medic ${run.check || ''}`}/>;
+                <div key={-2} className={`medic ${item.medic_check || ''}`}/>,
+                <div key={-1} className={`mechanic ${item.mechanic_check || ''}`}/>,
+                ...item.runs.filter(run => run.hasOwnProperty('check')).map((run, index) => {
+                    return <div key={index} className={`medic ${run.check || ''}`}/>;
                 })
             ];
 
