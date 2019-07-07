@@ -39,15 +39,28 @@
         }
 
         .header {
-            padding:     7px 12px;
-            background:  #eeeeee;
-            color:       #a1a1a1;
-            font-size:   12px;
-            line-height: 16px;
+            display:         flex;
+            flex-direction:  row;
+            flex-wrap:       nowrap;
+            justify-content: flex-start;
+            align-items:     flex-start;
+            padding:         0;
+            color:           #a2a2a2;
+            font-size:       13px;
+            line-height:     16px;
 
-            span {
-                display: inline-block;
-                margin:  0 5px 0 0;
+            .back {
+                padding:       8px 12px;
+                background:    white;
+                border-radius: 4px 4px 0 0;
+
+                span {
+                    display: inline-block;
+
+                    + span {
+                        margin-left: 5px;
+                    }
+                }
             }
         }
 
@@ -56,10 +69,29 @@
             padding:    8px 12px;
 
             p {
-                margin:      0 0 3px;
-                padding:     0;
-                font-size:   13px;
-                line-height: 16px;
+                display:         flex;
+                flex-direction:  row;
+                flex-wrap:       nowrap;
+                justify-content: flex-start;
+                align-items:     flex-start;
+                margin:          0 0 4px;
+                padding:         0;
+                font-size:       13px;
+                line-height:     16px;
+
+                img {
+                    display:         block;
+                    width:           20px;
+                    height:          20px;
+                    object-fit:      scale-down;
+                    object-position: center center;
+                }
+
+                span {
+                    padding:     2px 0 2px 5px;
+                    color:       #4a4a4a;
+                    font-weight: 500;
+                }
             }
 
             .route-info {
@@ -68,7 +100,7 @@
                 flex-wrap:       nowrap;
                 justify-content: flex-start;
                 align-items:     flex-start;
-                margin:          8px 0 0;
+                margin:          8px 0;
 
                 .time-range {
                     margin:      0 10px 0 0;
@@ -82,12 +114,52 @@
                     line-height: 1.4;
                 }
 
-                i.fa {
+                img {
                     display:   inline-block;
-                    margin:    0 3px;
-                    padding:   5px 0 0;
+                    width:     12px;
+                    margin:    6px 3px 0 3px;
                     font-size: 8px;
                     color:     #aaaaaa;
+                }
+            }
+
+            .summary-checks {
+                display:         flex;
+                flex-direction:  row;
+                flex-wrap:       nowrap;
+                justify-content: flex-end;
+                align-items:     flex-start;
+
+                .medic, .mechanic {
+                    display:             block;
+                    width:               24px;
+                    height:              24px;
+                    background-repeat:   no-repeat;
+                    background-position: center center;
+                }
+
+                .medic {
+                    background-image: url(/img/icon-medics.png);
+
+                    &.success {
+                        background-image: url(/img/icon-medics-success.png);
+                    }
+
+                    &.danger {
+                        background-image: url(/img/icon-medics-danger.png);
+                    }
+                }
+
+                .mechanic {
+                    background-image: url(/img/icon-mechanics.png);
+
+                    &.success {
+                        background-image: url(/img/icon-mechanics-success.png);
+                    }
+
+                    &.danger {
+                        background-image: url(/img/icon-mechanics-danger.png);
+                    }
                 }
             }
         }

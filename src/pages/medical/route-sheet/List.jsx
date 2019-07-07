@@ -25,18 +25,25 @@ export default class extends React.Component {
                 {show_date && <div className="route-date"><span>{route_date}</span></div>}
 
                 <div className="header">
-                    <span>#{item.id}</span>
-                    <span>Серия: {item.series}</span>
-                    <span>Номер: {item.number}</span>
+                    <div className="back">
+                        <span>Серия: {item.series}</span>
+                        <span>№: {item.number}</span>
+                    </div>
                 </div>
 
                 <div className="content-short">
-                    <p>{item.driver_name}</p>
-                    <p>{item.vehicle_vendor} {item.vehicle_number}</p>
+                    <p>
+                        <img src="/img/icon-sheet-driver.png" alt="" className="icon"/>
+                        <span>{item.driver_name}</span>
+                    </p>
+                    <p>
+                        <img src="/img/icon-sheet-vehicle.png" alt="" className="icon"/>
+                        <span>{item.vehicle_vendor} {item.vehicle_number}</span>
+                    </p>
                     <div className="route-info">
                         <div className="time-range">{start_time} - {end_time}</div>
                         <div className="point">{item.runs[0].name}</div>
-                        <i className="fa fa-arrow-right"/>
+                        <img src="/img/icon-arrow-right.png" alt=""/>
                         <div className="point">{item.runs[item.runs.length - 1].name}</div>
                     </div>
                 </div>

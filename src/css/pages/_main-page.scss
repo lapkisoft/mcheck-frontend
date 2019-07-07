@@ -7,7 +7,7 @@
         flex-wrap:       nowrap;
         justify-content: center;
         align-items:     center;
-        height:          calc(100vh - 50px);
+        height:          calc(100vh - var(--padding-main-page-bottom));
         width:           100%;
         max-width:       640px;
         margin:          0 auto;

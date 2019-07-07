@@ -9,6 +9,8 @@
     "driver_name":    "Иванов Иван Иванович",
     "vehicle_vendor": "Икарус",
     "vehicle_number": "т223тт",
+    "medic_check":    null,
+    "mechanic_check": null,
     "runs":           [
       {
         "time": "2019-07-06T22:00:00+07:00",
@@ -38,6 +40,8 @@
     "driver_name":    "Иванов Иван Иванович",
     "vehicle_vendor": "Икарус",
     "vehicle_number": "т223тт",
+    "medic_check":    "success",
+    "mechanic_check": null,
     "runs":           [
       {
         "time": "2019-07-06T22:00:00+07:00",
@@ -67,6 +71,8 @@
     "driver_name":    "Иванов Иван Иванович",
     "vehicle_vendor": "Икарус",
     "vehicle_number": "т223тт",
+    "medic_check":    "success",
+    "mechanic_check": "success",
     "runs":           [
       {
         "time": "2019-07-07T22:00:00+07:00",
@@ -77,7 +83,7 @@
         "time":  "2019-07-08T00:20:00+07:00",
         "type":  "Перевалочный пункт",
         "name":  "Болотное",
-        "check": null
+        "check": "success"
       },
       {
         "time": "2019-07-08T01:50:00+07:00",
@@ -96,6 +102,8 @@
     "driver_name":    "Иванов Иван Иванович",
     "vehicle_vendor": "Икарус",
     "vehicle_number": "т223тт",
+    "medic_check":    "success",
+    "mechanic_check": "danger",
     "runs":           [
       {
         "time": "2019-07-07T22:00:00+07:00",

@@ -77,7 +77,9 @@ header {
 }
 
 main {
-    padding-bottom: 80px;
+    --padding-main-page-bottom: 120px;
+
+    padding-bottom:             var(--padding-main-page-bottom);
 }
 
 footer {
