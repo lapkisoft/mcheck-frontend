@@ -14,6 +14,7 @@ import DriverUpdate from './driver/Update.jsx';
 import VehicleList from './vehicle/List.jsx';
 import VehicleCreate from './vehicle/Create.jsx';
 import VehicleUpdate from './vehicle/Update.jsx';
+import MapView from '../MapView.jsx';
 
 export default () => {
     return (
@@ -31,6 +32,7 @@ export default () => {
                     <Route path="/vehicles" component={VehicleList}/>
                     <Route path="/vehicle-create" component={VehicleCreate}/>
                     <Route path="/vehicle-update/:id" component={VehicleUpdate}/>
+                    <Route path="/map-page" component={MapView}/>
                     <Route component={NotFound}/>
                 </Switch>
             </main>
