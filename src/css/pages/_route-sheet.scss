@@ -153,6 +153,36 @@
                 }
             }
 
+            .sheet-controls {
+                display:         flex;
+                flex-direction:  row;
+                flex-wrap:       nowrap;
+                justify-content: space-between;
+                align-items:     flex-start;
+
+                a.map-link {
+                    display:         flex;
+                    flex-direction:  row;
+                    flex-wrap:       nowrap;
+                    justify-content: flex-start;
+                    align-items:     flex-start;
+                    text-decoration: none;
+
+                    img {
+                        display: block;
+                        margin:  0 3px 0 0;
+                    }
+
+                    span {
+                        display:       block;
+                        font-size:     11px;
+                        line-height:   13px;
+                        color:         #c4c4c4;
+                        border-bottom: 1px dashed #c4c4c4;
+                    }
+                }
+            }
+
             .summary-checks {
                 display:         flex;
                 flex-direction:  row;
@@ -445,6 +475,43 @@
                 line-height: 1.2;
                 color:       #4a4a4a;
             }
+        }
+    }
+}
+
+.medic-wrapper, .mechanic-wrapper {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: flex-start;
+    align-items:     center;
+
+    .img-wrapper {
+        display: block;
+        margin:  0 15px 0 0;
+        padding: 0;
+        
+        img {
+            display:         block;
+            width:           72px;
+            height:          72px;
+            object-fit:      contain;
+            object-position: center center;
+        }
+    }
+
+    .info {
+        .name {
+            color:       #4a4a4a;
+            font-weight: 500;
+            font-size:   13px;
+            line-height: 1.2;
+        }
+
+        .type {
+            color:       #a2a2a2;
+            font-size:   12px;
+            line-height: 1.2;
         }
     }
 }

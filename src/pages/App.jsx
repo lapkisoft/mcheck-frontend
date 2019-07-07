@@ -31,6 +31,7 @@ import MedicRouteSheetList from './medic/route-sheet/List.jsx';
 // police pages
 import PoliceIndex from './police/Index.jsx';
 import PoliceRouteSheetList from './police/route-sheet/List.jsx';
+import PoliceRouteSheetView from './police/route-sheet/View.jsx';
 
 export default class extends React.Component {
     render() {
@@ -63,6 +64,7 @@ export default class extends React.Component {
 
                         <Route path="/police" exact component={PoliceIndex}/>
                         <Route path="/police/route-sheets" component={PoliceRouteSheetList}/>
+                        <Route path="/police/route-sheet/:id" component={PoliceRouteSheetView}/>
 
                         <Route component={NotFound}/>
                     </Switch>

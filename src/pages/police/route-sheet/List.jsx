@@ -29,7 +29,7 @@ export default class extends React.Component {
         police_is_danger = police_is_danger || item.runs.filter(({check}) => check === 'danger').length > 0;
 
         return (
-            <Link to={`/medic/route-sheet/${item.id}`} key={item.id} className="route-sheet">
+            <Link to={`/police/route-sheet/${item.id}`} key={item.id} className="route-sheet">
                 {show_date && <div className="route-date"><span>{route_date}</span></div>}
 
                 <div className="header">
@@ -59,8 +59,14 @@ export default class extends React.Component {
                         <div className="point">{item.runs[item.runs.length - 1].name}</div>
                     </div>
 
-                    <div className="summary-checks">
-                        {checks}
+                    <div className="sheet-controls">
+                        <Link to="/police" className="map-link">
+                            <img src="/img/icon-map-small.png" alt=""/>
+                            <span>смотреть на карте</span>
+                        </Link>
+                        <div className="summary-checks">
+                            {checks}
+                        </div>
                     </div>
                 </div>
             </Link>
@@ -74,7 +80,7 @@ export default class extends React.Component {
             <div>
                 <header>
                     <nav>
-                        <Link to="/medic" className="back-link"><i className="fa fa-arrow-left"/> Путевые листы</Link>
+                        <Link to="/police" className="back-link"><i className="fa fa-arrow-left"/> Путевые листы</Link>
 
                         <img src="/img/nav/icon-sheet.png" alt=""/>
                     </nav>

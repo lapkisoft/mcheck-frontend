@@ -11,6 +11,8 @@
     "vehicle_number": "т223тт",
     "medic_check":    null,
     "mechanic_check": null,
+    "medic_name":     "Петрова Ирина Сергеевна",
+    "mechanic_name":  "Петров Алексей Сергеевич",
     "runs":           [
       {
         "time": "2019-07-06T22:00:00+07:00",
@@ -42,6 +44,8 @@
     "vehicle_number": "т223тт",
     "medic_check":    "success",
     "mechanic_check": null,
+    "medic_name":     "Петрова Ирина Сергеевна",
+    "mechanic_name":  "Петров Алексей Сергеевич",
     "runs":           [
       {
         "time": "2019-07-06T22:00:00+07:00",
@@ -73,6 +77,8 @@
     "vehicle_number": "т223тт",
     "medic_check":    "success",
     "mechanic_check": "success",
+    "medic_name":     "Петрова Ирина Сергеевна",
+    "mechanic_name":  "Петров Алексей Сергеевич",
     "runs":           [
       {
         "time": "2019-07-07T22:00:00+07:00",
@@ -104,6 +110,8 @@
     "vehicle_number": "т223тт",
     "medic_check":    "success",
     "mechanic_check": "danger",
+    "medic_name":     "Петрова Ирина Сергеевна",
+    "mechanic_name":  "Петров Алексей Сергеевич",
     "runs":           [
       {
         "time": "2019-07-07T22:00:00+07:00",
