@@ -39,7 +39,7 @@ export default () => {
                                 <img src="/img/icon-active-person.png" alt=""/>
                             </div>
 
-                            <div className="text">Гос авто инспекция</div>
+                            <div className="text">ГИБДД</div>
                         </Link>
                     </li>
                 </ul>
