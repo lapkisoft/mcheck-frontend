@@ -46,6 +46,7 @@ export default class extends React.Component {
                         <img src="/img/icon-sheet-driver.png" alt="" className="icon"/>
                         <span>{item.driver_name}</span>
                     </p>
+
                     <p>
                         <img src="/img/icon-sheet-vehicle.png" alt="" className="icon"/>
                         <span>{item.vehicle_vendor} {item.vehicle_number}</span>

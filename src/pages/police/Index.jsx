@@ -128,7 +128,7 @@ export default class extends Component {
             }
 
             this.setState({drivers});
-        }, 10);
+        }, 25);
         this.CMap = compose(
             withProps({
                 googleMapURL:     googleMapURL,
