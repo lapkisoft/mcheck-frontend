@@ -41,7 +41,7 @@ export default function() {
     });
 
     let vehicle_driver_list    = drivers.map(({id, name}) => <MenuItem key={id} value={id}>{name}</MenuItem>),
-        vehicle_list           = vehicles.map(({id, name}) => <MenuItem key={id} value={id}>{name}</MenuItem>),
+        vehicle_list           = vehicles.map(({id, vendor, number}) => <MenuItem key={id} value={id}>{vendor}, {number}</MenuItem>),
         route_destination_list = route_destinations.map(({id, departure_name, destination_name, is_disabled = false}) => {
             return <MenuItem key={id}
                              value={id}

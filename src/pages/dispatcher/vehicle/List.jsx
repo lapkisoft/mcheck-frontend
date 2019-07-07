@@ -56,7 +56,7 @@ export default class extends React.Component {
                     {vehicle_list}
                 </div>
 
-                <Link to="/vehicle-create">
+                <Link to="/dispatcher/vehicle-create">
                     <Fab className="btn-float-add" aria-label="Add">
                         <AddIcon/>
                     </Fab>
