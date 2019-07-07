@@ -99,7 +99,7 @@ class MapView extends Component {
         this.onClose      = this.onClose.bind(this);
 
         const comeCheck = (driver, coords) => driver.checks.findIndex((element, index, array) => {
-            return element.lng == coords.lng && element.lat == coords.lat;
+            return element.lng === coords.lng && element.lat === coords.lat;
         })
         const timerTick = (driverObject, driver) => {
             let coords     = driverObject.coords.shift();
@@ -109,7 +109,7 @@ class MapView extends Component {
             if (checkIndex >= 0)
                 driver.checks[checkIndex].status = driver.checks[checkIndex].customStatus;
 
-            if (checkIndex >= 0 && driver.checks[checkIndex].status == 'failed')
+            if (checkIndex >= 0 && driver.checks[checkIndex].status === 'failed')
                 driver.status = 'failed';
 
             return driver;
@@ -189,7 +189,7 @@ class MapView extends Component {
                     {this.state.directions && <DirectionsRenderer directions={this.state.directions}/>}
                     {this.state.drivers.map((driver) =>
                         <Marker
-                            icon={driver.status == 'clear' ? markerClearIconResized : markerFailedIconResized }
+                            icon={driver.status === 'clear' ? markerClearIconResized : markerFailedIconResized }
                             key={driver.id} position={{lat: driver.lat, lng: driver.lng}} onClick={() => {
                             this.onOpen(driver);
                             this.setDirection(this.state.drivers[driver.id]);
