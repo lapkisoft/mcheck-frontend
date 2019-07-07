@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {Settings} from 'luxon';
-import App from './pages/dispatcher/App.jsx';
+import App from './pages/mechanic/App.jsx';
 import './css/layout.scss';
 import './css/pages.scss';
 
