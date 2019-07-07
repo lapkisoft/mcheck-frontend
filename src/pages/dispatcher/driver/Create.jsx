@@ -31,11 +31,11 @@ export default function() {
         phone:           ''
     });
 
-    function handleChange(event) {
+    function handleChange(e) {
         setValues({
             ...values,
 
-            [event.target.name]: event.target.value
+            [e.target.name]: e.target.value
         });
     }
 

@@ -5,7 +5,7 @@ import FormGroup from '@material-ui/core/FormGroup';
 import Checkbox from '@material-ui/core/Checkbox';
 import {Button} from '@material-ui/core';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import route_sheets from '../../../data/router-sheets.json';
+import {route_sheets} from '../../../utils/data';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Radio from '@material-ui/core/Radio';
 
@@ -15,6 +15,7 @@ export default class extends React.Component {
 
         this.renderRun    = this.renderRun.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.onSubmit     = this.onSubmit.bind(this);
 
         let sheet_id = parseInt(`${props.match.params.id}`),
             sheet    = route_sheets.filter(({id}) => id === sheet_id)[0];
@@ -63,6 +64,28 @@ export default class extends React.Component {
         this.setState({
             [event.target.name]: value
         });
+    }
+
+    onSubmit(e) {
+        e.preventDefault();
+
+        let access = e.target.querySelector('[name="access_to_route"]:checked'),
+            value  = null;
+
+        if (access) {
+            value = access.value === 'true' ? 'success' : 'danger';
+        }
+
+        for (let route_sheet of route_sheets) {
+            if (route_sheet.id === this.state.sheet.id) {
+                route_sheet.mechanic_check = value;
+            }
+        }
+
+        localStorage.setItem('route_sheets', JSON.stringify(route_sheets));
+
+        this.props.history.push('/mechanic/route-sheets');
+        window.scrollTo(0, 0);
     }
 
     render() {
@@ -127,7 +150,7 @@ export default class extends React.Component {
                         <p>Чеклист проверки Транспортного Средства</p>
                     </div>
 
-                    <form action="" noValidate autoComplete="off">
+                    <form action="" noValidate autoComplete="off" onSubmit={this.onSubmit}>
                         <div className="white">
                             <div className="checkbox-group">
                                 <FormGroup aria-label="checkbox_01" name="checkbox_01">
@@ -406,23 +429,23 @@ export default class extends React.Component {
                                     className="radio-group"
                                     row>
                                     <FormControlLabel
-                                        value={false}
-                                        control={
-                                            <Radio
-                                                value={false}
-                                                name="access_to_route"
-                                                checked={this.state.access_to_route === 'false'}
-                                                onChange={this.handleChange}
-                                            />
-                                        }
-                                        label="Разрешить"/>
-                                    <FormControlLabel
                                         value={true}
                                         control={
                                             <Radio
                                                 value={true}
                                                 name="access_to_route"
                                                 checked={this.state.access_to_route === 'true'}
+                                                onChange={this.handleChange}
+                                            />
+                                        }
+                                        label="Разрешить"/>
+                                    <FormControlLabel
+                                        value={false}
+                                        control={
+                                            <Radio
+                                                value={false}
+                                                name="access_to_route"
+                                                checked={this.state.access_to_route === 'false'}
                                                 onChange={this.handleChange}
                                             />
                                         }

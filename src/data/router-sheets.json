@@ -23,7 +23,7 @@
         "time":  "2019-07-07T00:20:00+07:00",
         "type":  "Перевалочный пункт",
         "name":  "Болотное",
-        "check": "success"
+        "check": null
       },
       {
         "time": "2019-07-07T01:50:00+07:00",
@@ -42,7 +42,7 @@
     "driver_name":    "Иванов Иван Иванович",
     "vehicle_vendor": "Икарус",
     "vehicle_number": "т223тт",
-    "medic_check":    "success",
+    "medic_check":    null,
     "mechanic_check": null,
     "medic_name":     "Петрова Ирина Сергеевна",
     "mechanic_name":  "Петров Алексей Сергеевич",
@@ -56,7 +56,7 @@
         "time":  "2019-07-07T00:20:00+07:00",
         "type":  "Перевалочный пункт",
         "name":  "Болотное",
-        "check": "danger"
+        "check": null
       },
       {
         "time": "2019-07-07T01:50:00+07:00",
@@ -75,8 +75,8 @@
     "driver_name":    "Иванов Иван Иванович",
     "vehicle_vendor": "Икарус",
     "vehicle_number": "т223тт",
-    "medic_check":    "success",
-    "mechanic_check": "success",
+    "medic_check":    null,
+    "mechanic_check": null,
     "medic_name":     "Петрова Ирина Сергеевна",
     "mechanic_name":  "Петров Алексей Сергеевич",
     "runs":           [
@@ -89,7 +89,7 @@
         "time":  "2019-07-08T00:20:00+07:00",
         "type":  "Перевалочный пункт",
         "name":  "Болотное",
-        "check": "success"
+        "check": null
       },
       {
         "time": "2019-07-08T01:50:00+07:00",
@@ -108,8 +108,8 @@
     "driver_name":    "Иванов Иван Иванович",
     "vehicle_vendor": "Икарус",
     "vehicle_number": "т223тт",
-    "medic_check":    "success",
-    "mechanic_check": "danger",
+    "medic_check":    null,
+    "mechanic_check": null,
     "medic_name":     "Петрова Ирина Сергеевна",
     "mechanic_name":  "Петров Алексей Сергеевич",
     "runs":           [
