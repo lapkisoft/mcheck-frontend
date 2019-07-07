@@ -13,20 +13,23 @@ export default class extends React.Component {
     }
 
     renderSheet(item, index, routes) {
-        let route_date = formatDate(item.runs[0].time),
-            start_time = formatTime(item.runs[0].time),
-            end_time   = formatTime(item.runs[item.runs.length - 1].time),
-            show_date  = index === 0 || formatDate(routes[index - 1].runs[0].time) !== route_date,
-            checks     = [
+        let route_date       = formatDate(item.runs[0].time),
+            start_time       = formatTime(item.runs[0].time),
+            end_time         = formatTime(item.runs[item.runs.length - 1].time),
+            show_date        = index === 0 || formatDate(routes[index - 1].runs[0].time) !== route_date,
+            checks           = [
                 <div key={-2} className={`medic ${item.medic_check || ''}`}/>,
                 <div key={-1} className={`mechanic ${item.mechanic_check || ''}`}/>,
                 ...item.runs.filter(run => run.hasOwnProperty('check')).map((run, index) => {
                     return <div key={index} className={`medic ${run.check || ''}`}/>;
                 })
-            ];
+            ],
+            police_is_danger = item.medic_check === 'danger' || item.mechanic_check === 'danger';
+
+        police_is_danger = police_is_danger || item.runs.filter(({check}) => check === 'danger').length > 0;
 
         return (
-            <Link to={`/mechanic/route-sheet/${item.id}`} key={item.id} className="route-sheet">
+            <Link to={`/medic/route-sheet/${item.id}`} key={item.id} className="route-sheet">
                 {show_date && <div className="route-date"><span>{route_date}</span></div>}
 
                 <div className="header">
@@ -37,6 +40,8 @@ export default class extends React.Component {
                 </div>
 
                 <div className="content-short">
+                    <div className={`police-status ${police_is_danger ? 'danger' : 'success'}`}/>
+
                     <p>
                         <img src="/img/icon-sheet-driver.png" alt="" className="icon"/>
                         <span>{item.driver_name}</span>
@@ -45,12 +50,14 @@ export default class extends React.Component {
                         <img src="/img/icon-sheet-vehicle.png" alt="" className="icon"/>
                         <span>{item.vehicle_vendor} {item.vehicle_number}</span>
                     </p>
+
                     <div className="route-info">
                         <div className="time-range">{start_time} - {end_time}</div>
                         <div className="point">{item.runs[0].name}</div>
                         <img src="/img/icon-arrow-right.png" alt=""/>
                         <div className="point">{item.runs[item.runs.length - 1].name}</div>
                     </div>
+
                     <div className="summary-checks">
                         {checks}
                     </div>
@@ -66,7 +73,7 @@ export default class extends React.Component {
             <div>
                 <header>
                     <nav>
-                        <Link to="/mechanic" className="back-link"><i className="fa fa-arrow-left"/> Путевые листы</Link>
+                        <Link to="/medic" className="back-link"><i className="fa fa-arrow-left"/> Путевые листы</Link>
 
                         <img src="/img/nav/icon-sheet.png" alt=""/>
                     </nav>

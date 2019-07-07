@@ -47,7 +47,9 @@ export default function({match}) {
         <div>
             <header>
                 <nav>
-                    <Link to="/drivers" className="back-link"><i className="fa fa-arrow-left"/> Редактирование водителя</Link>
+                    <Link to="/dispatcher/drivers" className="back-link">
+                        <i className="fa fa-arrow-left"/> Редактирование водителя
+                    </Link>
 
                     <img src="/img/nav/icon-add-person.png" alt=""/>
                 </nav>

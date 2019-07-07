@@ -69,7 +69,9 @@ export default function({match}) {
         <div>
             <header>
                 <nav>
-                    <Link to={`/route-sheet/${sheet_id}`} className="back-link"><i className="fa fa-arrow-left"/> Редактирование путевого листа #{sheet_id}</Link>
+                    <Link to={`/dispatcher/route-sheet/${sheet_id}`} className="back-link">
+                        <i className="fa fa-arrow-left"/> Редактирование путевого листа #{sheet_id}
+                    </Link>
 
                     <img src="/img/nav/icon-add-vehicle.png" alt=""/>
                 </nav>

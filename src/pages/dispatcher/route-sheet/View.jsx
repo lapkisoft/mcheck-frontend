@@ -40,7 +40,7 @@ export default class extends React.Component {
             <div>
                 <header>
                     <nav>
-                        <Link to="/route-sheets" className="back-link">
+                        <Link to="/dispatcher/route-sheets" className="back-link">
                             <i className="fa fa-arrow-left"/> Путевой лист #{sheet.id}
                         </Link>
 
@@ -92,7 +92,7 @@ export default class extends React.Component {
                 <div className="page-controls">
                     <Button
                         component={Link}
-                        to={`/route-sheet-update/${sheet.id}`}
+                        to={`/dispatcher/route-sheet-update/${sheet.id}`}
                         fullWidth
                         className="update">
                         Редактировать
@@ -100,7 +100,7 @@ export default class extends React.Component {
 
                     <Button
                         component={Link}
-                        to={`/route-sheet-update/${sheet.id}`}
+                        to={`/dispatcher/route-sheet-update/${sheet.id}`}
                         fullWidth
                         className="delete">
                         Удалить

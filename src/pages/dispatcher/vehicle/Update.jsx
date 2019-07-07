@@ -47,7 +47,9 @@ export default function({match}) {
         <div>
             <header>
                 <nav>
-                    <Link to="/vehicles" className="back-link"><i className="fa fa-arrow-left"/> Редактировать транспорт</Link>
+                    <Link to="/dispatcher/vehicles" className="back-link">
+                        <i className="fa fa-arrow-left"/> Редактировать транспорт
+                    </Link>
 
                     <img src="/img/nav/icon-add-vehicle.png" alt=""/>
                 </nav>
@@ -93,7 +95,7 @@ export default function({match}) {
                         fullWidth
                         type="submit"
                         className="create">
-                        Добавить
+                        Редактировать
                     </Button>
                 </div>
             </form>

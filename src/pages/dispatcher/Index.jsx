@@ -7,7 +7,7 @@ export default () => {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/route-sheets">
+                        <Link to="/dispatcher/route-sheets">
                             <div className="icon">
                                 <img src="/img/icon-active-sheet.png" alt=""/>
                             </div>
@@ -16,7 +16,7 @@ export default () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/vehicles">
+                        <Link to="/dispatcher/vehicles">
                             <div className="icon">
                                 <img src="/img/icon-active-vehicle.png" alt=""/>
                             </div>
@@ -25,7 +25,7 @@ export default () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/drivers">
+                        <Link to="/dispatcher/drivers">
                             <div className="icon">
                                 <img src="/img/icon-active-person.png" alt=""/>
                             </div>

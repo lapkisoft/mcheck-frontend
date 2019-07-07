@@ -79,7 +79,9 @@ header {
 main {
     --padding-main-page-bottom: 120px;
 
-    // padding-bottom:             var(--padding-main-page-bottom);
+    body:not(.without-padding) & {
+        padding-bottom: var(--padding-main-page-bottom);
+    }
 }
 
 footer {

@@ -17,19 +17,19 @@ export default class extends React.Component {
         return (
             <div key={driver.id} className="driver">
                 <div className="icon">
-                    <Link to={`/driver-update/${driver.id}`}>
+                    <Link to={`/dispatcher/driver-update/${driver.id}`}>
                         <img src="/img/avatar-driver.png" alt=""/>
                     </Link>
                 </div>
 
                 <div className="name">
-                    <Link to={`/driver-update/${driver.id}`}>
+                    <Link to={`/dispatcher/driver-update/${driver.id}`}>
                         {driver.name}
                     </Link>
                 </div>
 
                 <div className="controls">
-                    <Link to={`/driver-delete/${driver.id}`}>
+                    <Link to={`/dispatcher/driver-delete/${driver.id}`}>
                         <img src="/img/icon-trash.png" alt=""/>
                     </Link>
                 </div>
@@ -44,7 +44,7 @@ export default class extends React.Component {
             <div>
                 <header>
                     <nav>
-                        <Link to="/" className="back-link"><i className="fa fa-arrow-left"/> Водители</Link>
+                        <Link to="/dispatcher" className="back-link"><i className="fa fa-arrow-left"/> Водители</Link>
 
                         <img src="/img/nav/icon-person.png" alt=""/>
                     </nav>
@@ -54,7 +54,7 @@ export default class extends React.Component {
                     {driver_list}
                 </div>
 
-                <Link to="/driver-create">
+                <Link to="/dispatcher/driver-create">
                     <Fab className="btn-float-add" aria-label="Add">
                         <AddIcon/>
                     </Fab>

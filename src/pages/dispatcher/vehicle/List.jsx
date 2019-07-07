@@ -17,7 +17,7 @@ export default class extends React.Component {
         return (
             <div key={vehicle.id} className="vehicle">
                 <div className="icon">
-                    <Link to={`/vehicle-update/${vehicle.id}`}>
+                    <Link to={`/dispatcher/vehicle-update/${vehicle.id}`}>
                         <img src={vehicle.avatar_uri} alt=""/>
                     </Link>
                 </div>
@@ -29,7 +29,7 @@ export default class extends React.Component {
                 </div>
 
                 <div className="controls">
-                    <Link to={`/vehicle-delete/${vehicle.id}`}>
+                    <Link to={`/dispatcher/vehicle-delete/${vehicle.id}`}>
                         <img src="/img/icon-trash.png" alt=""/>
                     </Link>
                 </div>
@@ -44,7 +44,9 @@ export default class extends React.Component {
             <div>
                 <header>
                     <nav>
-                        <Link to="/" className="back-link"><i className="fa fa-arrow-left"/> Транспортные средства</Link>
+                        <Link to="/dispatcher" className="back-link">
+                            <i className="fa fa-arrow-left"/> Транспортные средства
+                        </Link>
 
                         <img src="/img/nav/icon-vehicle.png" alt=""/>
                     </nav>

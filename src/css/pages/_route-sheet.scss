@@ -65,9 +65,31 @@
         }
 
         .content-short {
+            display:       block;
+            position:      relative;
             background:    white;
             padding:       8px 12px;
             border-radius: 0 4px 4px 4px;
+
+            .police-status {
+                display:             block;
+                position:            absolute;
+                top:                 13px;
+                right:               17px;
+                width:               35px;
+                height:              35px;
+                background-size:     contain;
+                background-position: center center;
+                background-repeat:   no-repeat;
+
+                &.success {
+                    background-image: url(/img/police-check-success.png);
+                }
+
+                &.danger {
+                    background-image: url(/img/police-check-danger.png);
+                }
+            }
 
             p {
                 display:         flex;
@@ -76,7 +98,7 @@
                 justify-content: flex-start;
                 align-items:     flex-start;
                 margin:          0 0 4px;
-                padding:         0;
+                padding:         0 45px 0 0;
                 font-size:       13px;
                 line-height:     16px;
 

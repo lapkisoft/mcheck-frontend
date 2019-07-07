@@ -28,7 +28,7 @@ export default class extends React.Component {
             ];
 
         return (
-            <Link to={`/route-sheet/${item.id}`} key={item.id} className="route-sheet">
+            <Link to={`/dispatcher/route-sheet/${item.id}`} key={item.id} className="route-sheet">
                 {show_date && <div className="route-date"><span>{route_date}</span></div>}
 
                 <div className="header">
@@ -68,7 +68,7 @@ export default class extends React.Component {
             <div>
                 <header>
                     <nav>
-                        <Link to="/" className="back-link"><i className="fa fa-arrow-left"/> Путевые листы</Link>
+                        <Link to="/dispatcher" className="back-link"><i className="fa fa-arrow-left"/> Путевые листы</Link>
 
                         <img src="/img/nav/icon-sheet.png" alt=""/>
                     </nav>
@@ -78,7 +78,7 @@ export default class extends React.Component {
                     {route_sheet_list}
                 </div>
 
-                <Link to="/route-sheet-create">
+                <Link to="/dispatcher/route-sheet-create">
                     <Fab className="btn-float-add" aria-label="Add">
                         <AddIcon/>
                     </Fab>

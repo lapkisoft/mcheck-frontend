@@ -43,7 +43,7 @@ export default function() {
         <div>
             <header>
                 <nav>
-                    <Link to="/vehicles" className="back-link"><i className="fa fa-arrow-left"/> Добавить транспорт</Link>
+                    <Link to="/dispatcher/vehicles" className="back-link"><i className="fa fa-arrow-left"/> Добавить транспорт</Link>
 
                     <img src="/img/nav/icon-add-vehicle.png" alt=""/>
                 </nav>

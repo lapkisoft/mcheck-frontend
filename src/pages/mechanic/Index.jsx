@@ -7,7 +7,7 @@ export default () => {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/route-sheets">
+                        <Link to="/mechanic/route-sheets">
                             <div className="icon">
                                 <img src="/img/icon-active-sheet.png" alt=""/>
                             </div>

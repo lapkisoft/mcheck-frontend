@@ -64,7 +64,7 @@ export default function() {
         <div>
             <header>
                 <nav>
-                    <Link to="/route-sheets" className="back-link"><i className="fa fa-arrow-left"/> Создание путевого листа</Link>
+                    <Link to="/dispatcher/route-sheets" className="back-link"><i className="fa fa-arrow-left"/> Создание путевого листа</Link>
 
                     <img src="/img/nav/icon-add-vehicle.png" alt=""/>
                 </nav>
