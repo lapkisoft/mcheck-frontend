@@ -51,9 +51,10 @@ export default class extends React.Component {
                 <div className="route-sheet-list">
                     <div className="route-sheet">
                         <div className="header">
-                            <span>#{sheet.id}</span>
-                            <span>Серия: {sheet.series}</span>
-                            <span>Номер: {sheet.number}</span>
+                            <div className="back">
+                                <span>Серия: {sheet.series}</span>
+                                <span>№: {sheet.number}</span>
+                            </div>
                         </div>
 
                         <div className="content">

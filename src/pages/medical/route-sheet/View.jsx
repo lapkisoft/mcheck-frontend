@@ -36,7 +36,14 @@ export default class extends React.Component {
         let sheet      = this.state.sheet,
             route_date = formatDate(sheet.runs[0].time),
             start_time = formatTime(sheet.runs[0].time),
-            end_time   = formatTime(sheet.runs[sheet.runs.length - 1].time);
+            end_time   = formatTime(sheet.runs[sheet.runs.length - 1].time),
+            checks     = [
+                <div className={`medic ${sheet.medic_check || ''}`}/>,
+                <div className={`mechanic ${sheet.mechanic_check || ''}`}/>,
+                ...sheet.runs.filter(run => run.hasOwnProperty('check')).map(run => {
+                    return <div className={`medic ${run.check || ''}`}/>;
+                })
+            ];
 
         return (
             <div>
@@ -53,19 +60,30 @@ export default class extends React.Component {
                 <div className="route-sheet-list">
                     <div className="route-sheet">
                         <div className="header">
-                            <span>#{sheet.id}</span>
-                            <span>Серия: {sheet.series}</span>
-                            <span>Номер: {sheet.number}</span>
+                            <div className="back">
+                                <span>Серия: {sheet.series}</span>
+                                <span>№: {sheet.number}</span>
+                            </div>
                         </div>
 
-                        <div className="content">
-                            <p>{sheet.driver_name}</p>
-                            <p>{sheet.vehicle_vendor} {sheet.vehicle_number}</p>
+                        <div className="content-short">
+                            <p>
+                                <img src="/img/icon-sheet-driver.png" alt="" className="icon"/>
+                                <span>{sheet.driver_name}</span>
+                            </p>
+                            <p>
+                                <img src="/img/icon-sheet-vehicle.png" alt="" className="icon"/>
+                                <span>{sheet.vehicle_vendor} {sheet.vehicle_number}</span>
+                            </p>
+                            <div className="content-route-date">{route_date}</div>
                             <div className="route-info">
                                 <div className="time-range">{start_time} - {end_time}</div>
                                 <div className="point">{sheet.runs[0].name}</div>
-                                <i className="fa fa-arrow-right"/>
+                                <img src="/img/icon-arrow-right.png" alt=""/>
                                 <div className="point">{sheet.runs[sheet.runs.length - 1].name}</div>
+                            </div>
+                            <div className="summary-checks">
+                                {checks}
                             </div>
                         </div>
                     </div>

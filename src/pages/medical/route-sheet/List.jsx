@@ -18,7 +18,14 @@ export default class extends React.Component {
         let route_date = formatDate(item.runs[0].time),
             start_time = formatTime(item.runs[0].time),
             end_time   = formatTime(item.runs[item.runs.length - 1].time),
-            show_date  = index === 0 || formatDate(routes[index - 1].runs[0].time) !== route_date;
+            show_date  = index === 0 || formatDate(routes[index - 1].runs[0].time) !== route_date,
+            checks     = [
+                <div className={`medic ${item.medic_check || ''}`}/>,
+                <div className={`mechanic ${item.mechanic_check || ''}`}/>,
+                ...item.runs.filter(run => run.hasOwnProperty('check')).map(run => {
+                    return <div className={`medic ${run.check || ''}`}/>;
+                })
+            ];
 
         return (
             <Link to={`/route-sheet/${item.id}`} key={item.id} className="route-sheet">
@@ -45,6 +52,9 @@ export default class extends React.Component {
                         <div className="point">{item.runs[0].name}</div>
                         <img src="/img/icon-arrow-right.png" alt=""/>
                         <div className="point">{item.runs[item.runs.length - 1].name}</div>
+                    </div>
+                    <div className="summary-checks">
+                        {checks}
                     </div>
                 </div>
             </Link>
